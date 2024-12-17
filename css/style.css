@@ -1,0 +1,984 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    height: 100%; 
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0; /* Fixa no topo */
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 70px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    z-index: 1000; /* Mantém a navbar no topo */
+    transition: ease 0.5s;
+    color: #333333a4;
+}
+
+
+.nav-title{
+    width: 45%;
+    font-family: "Playfair Display", serif;
+    color:#C5A05A;
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+.nav-link{
+    width: 40%;
+}
+
+.nav-link ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-link ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link ul li a{
+    padding: 10px;
+    text-decoration: none;
+    color: #C5A05A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: 1px solid #C5A05A;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.nav-link ul li a:hover{
+    background-color: #4B0F24;
+    transition: 0.6s;
+}
+
+.nav-link ul li img{
+    height: 19px;
+}
+
+header{
+    padding:  10px 50px;
+    background-image: url(/img/blog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top ;
+    height: 550px;
+    width: 100%;
+    
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    height: 350px;
+}
+
+.hero-title{
+
+    color: #C5A05A;
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+    font-style: normal; 
+}
+
+.hero-title h2{
+    width: 60%;
+}
+
+.hero-text{
+    font-family: "Montserrat", sans-serif;
+    color: #F5F1E6;
+    width: 40%;
+}
+
+.hero-bttn{
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bttn a{
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    background-color: #C5A05A;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.hero-bttn a:hover{
+    background-color: #4B0F24;
+    transition: 0.6s;
+
+}
+
+/* Contêiner principal */
+.slider-wine {
+    width: 100%;
+    margin: 50px auto;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slider {
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.slider .title{
+    font: 15px;
+    font-weight: bolder;
+    font-family: "Playfair Display", serif;
+    margin: 5px auto;
+    color: #C5A05A;
+    letter-spacing: 5px;
+}
+
+/* Botões do slider */
+
+.slider-controls {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.slider-button {
+    background-color: #C5A05A;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%; /* Bordas retangulares */
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-button:hover {
+    background-color: #4B0F24;
+}
+
+/* Container dos slides */
+.slides {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Estilo do item */
+.item-slide {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+    flex: 0 0 30.333%;
+}
+
+.item-slide:hover {
+    transform: scale(1.02);
+}
+
+/* Botão de coração */
+.wineheart {
+    width: 100%;
+    padding: 5px;
+}
+
+.heart-btn {
+    position: relative;
+    left: 180px;
+    width: 40px;
+    background-color: transparent;
+    border: transparent;
+    color: #C5A05A;
+    border-radius: 50%;
+    font-size: 30px;
+    transition: 0.3s ease;
+}
+
+.heart-btn:hover {
+    color: #C5A05A;
+    background-color: #4B0F24;
+    border-radius: 50%;
+    padding: 1px;
+}
+
+.heart-btn.favorito {
+    color: #4B0F24;
+    background-color: #C5A05A;
+    padding: 1px;
+}
+
+/* Imagem do vinho */
+.wineimg {
+    position: relative;
+    bottom: 10px;
+    object-fit: cover;
+}
+
+.wineimg img {
+    width: auto;
+    height: 120px;
+    border-radius: 8px;
+    max-height: 150px;
+}
+
+/* Texto do vinho */
+.winetext {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    padding: 10px;
+    text-align: center;
+}
+
+.winetext h3 {
+    font: 11px;
+    font-weight: bolder;
+    font-family: "Playfair Display", serif;
+    margin: 5px auto;
+    color: #C5A05A;
+}
+
+.winetext p {
+    color: #aaa;
+    margin: 5px 0;
+    font-size: 13px;
+    font-family: "Montserrat";
+}
+
+.winetext strong {
+    color: #C5A05A;
+    font-size: 14px;
+    margin: 5px 0;
+    font-family: "Montserrat";
+}
+
+/*Wine button*/
+.winetext button {
+    width: 70%;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #C5A05A;
+    border: none;
+    color: #fff;
+    transition: 0.2s ease;
+    font-family: "Montserrat";
+    font-size: 12px
+}
+
+.winetext button:hover {
+    background-color: #4B0F24;
+}
+
+/*Sessão de promoção*/
+.promo-section {
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 500px;
+    margin: 20px auto;
+    padding: 10px 30px;
+    background-image: 
+    linear-gradient(to right, 
+        rgba(170, 170, 170, 0.1) 0%, 
+        rgba(197, 160, 90, 0.5) 50%, 
+        rgba(75, 15, 36, 0.6) 100%),
+        url('/img/promo.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.text-promo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+}
+
+.text-promo h3{
+    font-size: 5rem;
+    margin: 10px;
+    font-family: "Cormorant Garamond", serif;
+    color: #C5A05A;
+}
+
+.text-promo p{
+    color: #aaa;
+    margin: 10px ;
+    font-size: 18px;
+    font-family: "Montserrat";
+}
+
+.text-promo p strong{
+    color: #C5A05A;
+}
+
+.text-promo button{
+    width: 50%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #C5A05A;
+    border: none;
+    color: #fff;
+    transition: 0.2s ease;
+    font-family: "Montserrat";
+}
+
+.text-promo button:hover{
+    background-color: #4B0F24;
+    
+}
+
+/*Sessão de about us*/
+.about-us{
+    height: 550px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.text-section{
+    font-family: "Montserrat";
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    width: 70%;
+}
+
+.text-section .title{
+    width: 80%;
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: #C5A05A;
+}
+
+.text-section .title::after {
+    content: "";
+    display:block;
+    width: 200px; 
+    height: 2px; 
+    background-color: #C5A05A;  
+    border-radius: 10px;
+}
+
+.text-section .text{
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.text-section .descrition{
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    font-family: "Montserrat";
+    font-weight: lighter;
+    color: #C5A05A;
+}
+
+.img-section{
+    width: 50%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-section img{
+    height: 400px;
+}
+
+/*Sessão de contacto*/
+.contacto{
+    border: 1px solid #aaaaaa49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.img-section{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.img-section img{
+    height: 450px;
+}
+
+.contacto-section{
+    width: 60%;
+    padding: 10px;
+}
+
+.contacto-section .title{
+    width: 100%;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 5px;
+    color: #C5A05A;
+    
+}
+
+.contacto-section form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form input{
+    margin: 10px auto;
+    border: 1px solid #C5A05A;
+    border-radius: 4px;
+    padding: 10px;
+    height: 30px;
+    width: 50%;
+    background-color: transparent;
+}
+
+form input::placeholder{
+    color: #C5A05A;
+}
+
+textarea{
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #C5A05A;
+    border-radius: 5px;
+    background-color: transparent; 
+    color: #C5A05A; 
+    font-size: 1rem;
+}
+
+form button{
+    width: 30%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #C5A05A;
+    border: none;
+    color: #fff;
+    transition: 0.2s ease;
+    font-family: "Montserrat";
+}
+
+form button:hover{
+    background-color: #4B0F24;
+    
+}
+
+/*Sessão do roda pé*/
+footer {
+    height: 250px;
+    width: 100%;
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: justify;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #C5A05A;
+}
+
+
+.footer-info p,.footer-links ul,
+.footer-social .social-icons a {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.footer-links ul li a:hover {
+    color: #C5A05A;
+}
+
+.footer-social .social-icons a img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #C5A05A;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #C5A05A;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.footer-newsletter button:hover {
+    background-color: #4B0F24;
+}
+
+/*Responsividade*/
+
+@media (max-width: 870px) and (min-width: 455px) {
+    /* Responsividade para o header*/
+    .nav-title {
+        width: 100%;
+        text-align: center;
+        font-size: 22px; 
+        padding: 10px 0; 
+    }
+
+    .nav-link {
+        display: none;
+    }
+    header {
+        background-size: cover; 
+        height: 450px; 
+    }
+
+    .hero-title h2 {
+        display: flex;
+        align-items: center;
+        bottom: 25px; 
+        width: 80%; 
+        margin-bottom: 15px; 
+        font-size: 19px;
+    }
+
+    .hero-text {
+        width: 100%;
+        font-size: 13px; 
+    }
+
+    .hero-bttn {
+        width: 60%; 
+        margin: 0px 10px;
+    }
+
+    .hero-bttn a {
+        font-size: 14px; 
+        padding: 12px 18px; 
+        border-radius: 5px; 
+    }
+
+    .slider {
+        width: 60%; 
+    }
+    
+    .slider-controls {
+        width: 50%; 
+    }
+    
+    .item-slide {
+        width: 100px; 
+        flex: 0 0 100%; 
+    }
+    
+    .promo-section {
+        height: 400px;
+    }
+
+    .text-promo{
+        width: 60%
+    }
+
+    .text-promo h3{
+        font-size: 2.5rem;
+    }
+
+    .text-promo p{
+        font-size: 15px;
+    }
+
+    .text-promo button{
+        width: 50%;
+    }
+
+    .about-us{
+        height: auto;
+        width: 100%;
+    }
+
+    .text-section{
+        width: 70%;
+    }
+
+    .text-section .title{
+        width: 100%;
+    }
+
+    .text-section .title::after {
+        width: 100%; 
+    }
+
+    .text-section .text{
+        margin: 2px;
+    }
+
+    .img-section{
+        width: 40%;
+    }
+       
+    .img-section img{
+        height: 330px;
+    }
+
+    .contacto{
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    .contacto-section{
+        width: 80%;
+        padding: 0px;
+    }
+
+    .contacto-section .title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    form input{
+        margin: 5px auto;
+        width: 60%;
+    }
+
+    textarea{
+        padding: 5px;
+        margin: 5px 0;
+        font-size: 0.7rem;
+    }
+
+    /*Responsividade do footer*/
+    footer {
+        padding: 20px 15px; 
+    }
+
+    .footer-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    footer h4 {
+        font-size: 16px;
+        margin-bottom: 10px; 
+    }
+    
+    .footer-info p, .footer-links ul, .footer-social .social-icons a {
+        font-size: 13px; 
+    }
+    
+    .footer-links ul {
+        margin-bottom: 15px; 
+    }
+    
+    .footer-social .social-icons a img {
+        width: 25px; 
+        margin: 0 8px; 
+    }
+    
+    .footer-newsletter input {
+        width: 150px; 
+    }
+    
+    .footer-newsletter button {
+        width: 150px; 
+        margin-top: 10px; 
+    }
+
+}   
+    
+@media (max-width: 455px) {
+    .nav-title {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;  /* Ajustei o tamanho da fonte para melhorar a legibilidade */
+        padding: 8px 0;  /* Reduzi o padding para que o texto se encaixe melhor */
+    }
+
+    .nav-link {
+        display: none;  /* Esconde os links de navegação */
+    }
+
+    header {
+        background-size: cover;
+        height: auto;  
+        width: 100%;
+        padding:  10px 20px;
+    }
+
+    .hero-title h2 {
+        display: flex;
+        align-items: center;
+        bottom: 25px;
+        width: 100%;
+        margin-bottom: 10px; 
+        font-size: 14px;  
+    }
+
+    .hero-text {
+        width: 100%;
+        font-size: 12px; 
+    }
+
+    .hero-bttn {
+        width: 100%; 
+        margin: 10px 0;  
+    }
+
+    .hero-bttn a {
+        font-size: 12px;
+        padding: 10px;  
+        border-radius: 8px;
+    }
+
+    .slider {
+        width: 100%; 
+    }
+
+    .slider-controls {
+        width: 80%;  /* Deixei o controle de slides mais centralizado */
+    }
+
+    .item-slide {
+        width: 100px;  
+        flex: 0 0 100%;
+    }
+
+    .promo-section {
+        height: 350px;  
+    }
+
+    .text-promo {
+        width: 100%;  
+    }
+
+    .text-promo h3 {
+        font-size: 32px;  
+    }
+
+    .text-promo p {
+        font-size: 14px; 
+    }
+
+    .text-promo button {
+        width: 60%;  
+        font-size: 12px;
+    }
+
+    .about-us {
+        width: 100%;
+        height: auto;  
+    }
+
+    .text-section {
+        width: 100%;  
+        background-image: url(/img/vinhos.des.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top ;
+    }
+
+    .text-section .title {
+        width: 100%;
+    }
+
+    .text-section .title::after {
+        width: 100%;
+    }
+
+    .text-section .text {
+        margin-bottom: 10px;  
+        color:#F5F1E6;/*Ajustar cor*/
+    }
+
+    .text-section .descrition{
+        font-weight: bolder;
+        
+    }
+
+    .img-section {
+        display: none;
+        width: 100%;  
+    }
+
+    .contacto {
+        width: 100%;
+        margin: 10px auto;  /* Reduzi a margem para otimizar o layout */
+    }
+
+    .contacto-section {
+        width: 90%;  /* Aumentei a largura da seção de contato */
+        padding: 0;
+    }
+
+    .contacto-section .title {
+        font-size: 18px;  /* Ajustei o tamanho da fonte do título */
+        margin-bottom: 10px;
+    }
+
+    .contacto button{
+        width: 60%;  
+        font-size: 12px;
+    }
+
+    form input {
+        width: 80%;  
+        margin: 5px auto;
+    }
+
+    textarea {
+        padding: 5px;
+        margin: 5px 0;
+        font-size: 0.8rem;  
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 15px;
+        text-align: left;
+    }
+
+    .footer-container {
+        display: block; 
+        width: 100%;
+    }
+
+    footer h4 {
+        font-size: 16px; 
+        margin-bottom: 10px;
+    }
+
+    /* Ajuste nos links do footer */
+    .footer-info p,
+    .footer-links ul,
+    .footer-social .social-icons a {
+        font-size: 12px; 
+        margin: 5px 0;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        text-align: justify; 
+    }
+
+    .footer-links ul li a {
+        color: #aaa;
+        text-decoration: none;
+    }
+
+    .footer-links ul li a:hover {
+        color: #C5A05A;
+    }
+
+    
+    .footer-social .social-icons a img {
+        width: 25px; 
+        margin: 5px;
+    }
+
+    /* Ajuste no formulário de newsletter */
+    .footer-newsletter input {
+        width: 100%; 
+        margin-right: 0;
+        padding: 8px;
+    }
+
+    .footer-newsletter button {
+        width: 100%; 
+        padding: 12px;
+    }
+
+    .footer-newsletter button:hover {
+        background-color: #4B0F24;
+    }
+}
