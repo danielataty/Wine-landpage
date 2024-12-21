@@ -173,32 +173,6 @@ header{
     letter-spacing: 5px;
 }
 
-/* Botões do slider */
-
-.slider-controls {
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10px;
-    
-}
-
-.slider-button {
-    background-color: #C5A05A;
-    color: white;
-    font-size: 24px;
-    border: none;
-    border-radius: 50%; /* Bordas retangulares */
-    cursor: pointer;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
-
-.slider-button:hover {
-    background-color: #4B0F24;
-}
-
 /* Container dos slides */
 .slides {
     display: flex;
@@ -536,9 +510,9 @@ form button:hover{
     
 }
 
-/*Sessão do roda pé*/
+
 footer {
-    height: 250px;
+    height: 180px;
     width: 100%;
     background-color: #2d2d2d;
     color: #fff;
