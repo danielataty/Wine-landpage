@@ -81,16 +81,13 @@ body{
 }
 
 .hero-section {
-    height: 600px; /* Usando 100vh para cobrir toda a altura da tela */
+    height: 600px; 
     width: 100%;
     display: flex;
+    justify-content: left;
     align-items: center;
-    justify-content: center;
-    flex-direction: column; /* Centraliza o conteúdo na tela */
     position: relative;
     animation: fadeIn 1s ease-in-out;
-    text-align: center; /* Centraliza o texto */
-
 }
 
 video {
@@ -106,21 +103,19 @@ video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; 
+    width: 50%; 
     height: 100%;
+    margin-left: 70px;
     color: #F5F1E6;
     z-index: 1;
-    background: linear-gradient(135deg,#c5a05a34,#1f1f1f4d );
-    
 }
 
 .hero-text h2 {
-    width: 40%;
+    width: 100%;
     color: #C5A05A;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
-    font-size: 2rem; 
-    margin-bottom: 20px;
+    text-align: center;
     letter-spacing: 1px;
 }
 
@@ -128,24 +123,22 @@ video {
     color: #aaa;
     font-family: "Open Sans", sans-serif;
     font-weight: lighter;
-    font-size: 1rem;
     margin-bottom: 20px;
 }
 
 .hero-text .texto {
     font-family: "Montserrat", sans-serif;
-    color: #F5F1E6;
-    font-size: 1.1rem; /* Aumenta o tamanho da fonte para maior legibilidade */
-    margin-bottom: 20px;
-    line-height: 1.5; /* Melhora a legibilidade do texto */
-    text-align: center;
+    color: #F5F1E6; 
+    line-height: 1.5;
+    text-align: justify;
+    margin: 20px;
 }
 
 .btn {
-    width: 200px; /* Ajuste para manter o botão com uma largura consistente */
+    width: 20%;
     background-color: #C5A05A;
     border: none;
-    padding: 12px;
+    padding: 8px;
     margin-top: 20px;
     border-radius: 20px;
     animation: fadeIn 1s ease-in-out;
@@ -158,12 +151,12 @@ video {
     color: #F5F1E6;
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 15px;
 }
 
 .btn:hover {
     background-color: #4B0F24;
-    transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-6px); 
 }
 
 @keyframes fadeIn {
