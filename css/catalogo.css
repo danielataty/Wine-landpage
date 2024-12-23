@@ -355,6 +355,55 @@ select option {
     background-color: #4B0F24;
 }
 
+.galerry{
+    width: 100%;
+    height: auto;
+    margin: 30px 5px;
+    padding: 20px 0;
+    border: 1px solid red;
+}
+
+.galerry .imagens{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.galerry .imagens a img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px; 
+    object-fit: cover;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.galerry .imagens img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(151, 151, 151, 0.2);
+}
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .galerry {
+        padding: 10px 0;
+    }
+
+    .imagens {
+        width: calc(100% * 6); /* Ajusta a largura para 6 imagens em dispositivos menores */
+    }
+
+    .imagens img {
+        width: 100%;
+    }
+}
 
 
 footer {

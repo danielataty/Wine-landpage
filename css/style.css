@@ -12,6 +12,7 @@ body{
     background-color: #1f1f1f;
     height: 100%; 
     overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .navbar {
@@ -74,6 +75,7 @@ body{
 .nav-link ul li a:hover{
     background-color: #4B0F24;
     transition: 0.6s;
+    transform: translateY(-3px); 
 }
 
 .nav-link ul li img{
@@ -82,40 +84,48 @@ body{
 
 header{
     padding:  10px 50px;
-    background-image: url(/img/blog.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top ;
-    height: 550px;
+    height: 600px;
     width: 100%;
+    animation: slideImages 20s infinite;
+    transition: background-image 1s ease-in-out; 
 }
 
-.hero{
+.hero {
     display: flex;
-    justify-content: center;
+    height: auto;
+    justify-content: end;
     align-items: start;
     flex-direction: column;
     height: 350px;
+    width: 100%;
+    background-size: cover;  
+    background-position: center; 
+    
 }
 
-.hero-title{
+.hero-title {
     color: #C5A05A;
     font-family: "Open Sans", sans-serif;
     font-weight: lighter;
     font-style: normal; 
+    margin-bottom: 20px;
 }
 
-.hero-title h2{
+.hero-title h2 {
     width: 60%;
 }
 
-.hero-text{
+.hero-text {
     font-family: "Montserrat", sans-serif;
     color: #F5F1E6;
     width: 40%;
+    margin-bottom: 20px;
 }
 
-.hero-bttn{
+.hero-bttn {
     width: 40%;
     height: auto;
     padding: 10px;
@@ -124,7 +134,7 @@ header{
     justify-content: center;
 }
 
-.hero-bttn a{
+.hero-bttn a {
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     background-color: #C5A05A;
@@ -134,10 +144,10 @@ header{
     border-radius: 8px;
 }
 
-.hero-bttn a:hover{
+.hero-bttn a:hover {
     background-color: #4B0F24;
     transition: 0.6s;
-
+    transform: translateY(-6px); 
 }
 
 /* Contêiner principal */
@@ -149,10 +159,12 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+   
 }
 
-.slider {
-    border: 2px solid red;
+.slider { 
+    border: 1px solid #2d2d2d;
+    box-shadow: 0 10px 15px rgba(151, 151, 151, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,16 +202,21 @@ header{
     justify-content: center;
     flex-direction: column;
     margin: 10px;
-    background-color: #2d2d2d;
-    border: 1px solid #444;
-    border-radius: 10px;
+    
     transition: transform 0.5s ease-in-out;
     flex: 0 0 30.333%;
+    background: #2d2d2d;
+    animation: fadeIn 0.5s ease-in-out;
+    border: 1px solid #C5A05A;
+    border-radius: 10px 20px;
 }
 
 .item-slide:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(151, 151, 151, 0.2);
 }
+
+
 
 /* Botão de coração */
 .wineheart {
@@ -300,7 +317,6 @@ header{
 
 /*Sessão de promoção*/
 .promo-section {
-    border: 2px solid red;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -346,7 +362,7 @@ header{
 }
 
 .text-promo button{
-    width: 50%;
+    width: 20%;
     margin: 10px 0;
     padding: 10px;
     border-radius: 8px;
@@ -359,7 +375,7 @@ header{
 
 .text-promo button:hover{
     background-color: #4B0F24;
-    
+    transform: translateY(-3px);
 }
 
 /*Sessão de about us*/
@@ -505,7 +521,7 @@ form button{
 
 form button:hover{
     background-color: #4B0F24;
-    
+    transform: translateY(-3px);
 }
 
 
@@ -554,6 +570,12 @@ footer h4 {
 .footer-social .social-icons a img {
     width: 30px;
     margin: 0 10px;
+    border-radius: 50%;
+}
+
+.footer-social .social-icons a img:hover {
+    box-shadow: 0 10px 15px rgba(151, 151, 151, 0.2);
+    transform: translateY(-2px); 
 }
 
 .footer-newsletter input {
@@ -575,6 +597,28 @@ footer h4 {
 
 .footer-newsletter button:hover {
     background-color: #4B0F24;
+    transform: translateY(-3px);
+    
+}
+/*Animações*/
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* Animação dos slides */
+@keyframes slideImages {
+    0% {
+        background-image: url('/img/hero1.jpg');
+    }
+    33% {
+        background-image: url('/img/hero2.jpg');
+    }
+    66% {
+        background-image: url('/img/hero3.jpg');
+    }
+    100% {
+        background-image: url('/img/hero1.jpg');
+    }
 }
 
 /*Responsividade*/
