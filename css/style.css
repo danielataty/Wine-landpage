@@ -95,11 +95,10 @@ header{
 
 .hero {
     display: flex;
-    height: auto;
     justify-content: end;
     align-items: start;
     flex-direction: column;
-    height: 350px;
+    height: 400px;
     width: 100%;
     background-size: cover;  
     background-position: center; 
