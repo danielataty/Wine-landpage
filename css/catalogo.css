@@ -262,7 +262,6 @@ select option {
     animation: fadeIn 0.5s ease-in-out
 }
 
-
 .item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(151, 151, 151, 0.2);
@@ -296,14 +295,15 @@ select option {
     font-size: 12px;
     margin-bottom: 10px;
     line-height: 1.4;
+    font-family: "Montserrat";
 }
 
 .preco {
     color: #C5A05A;
     font-size: 15px;
-    font-style: italic;
     font-weight: bold;
     margin-bottom: 10px;
+    font-family: "Montserrat";
 }
 
 .button {
@@ -321,7 +321,8 @@ select option {
 .button a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
+    font-family: "Montserrat";
 }
 
 .button:hover {
@@ -345,7 +346,7 @@ select option {
     color: white;
     font-size: 24px;
     border: none;
-    border-radius: 50%; /* Bordas retangulares */
+    border-radius: 50%; 
     cursor: pointer;
     padding: 10px 15px;
     transition: background-color 0.3s ease;
@@ -384,9 +385,6 @@ select option {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(151, 151, 151, 0.2);
 }
-
-
-
 
 
 /* Responsividade */

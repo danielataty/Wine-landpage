@@ -6,10 +6,10 @@ var buttonFavorito = document.querySelector(".heart-btn")
 window.addEventListener('scroll', function() {
     // Verifica a posição da rolagem
     if (window.scrollY >= 85) {
-        navbar.style.background = "#"; 
+        navbar.style.background = "rgba(197, 160, 90, 0.2)"; 
         navbar.style.boxShadow = " 0 2px 5px rgba(0, 0, 0, 0.2)"
     } else {
-        navbar.style.background = "transparent"; 
+        navbar.style.background = "transparent" 
         navbar.style.boxShadow = " 0 0px 0px rgba(0, 0, 0, 0)"
     }
 });
@@ -19,6 +19,7 @@ buttonFavorito.addEventListener("click", ()=>{
     buttonFavorito.classList.toggle('favorito');
 })
 
+/* Para ter afuncionalidade de slide
 const prevBtn = document.querySelector('.slider-button.prev');
 const nextBtn = document.querySelector('.slider-button.next');
 const slides = document.querySelector('.slides');
@@ -32,7 +33,7 @@ function updateSliderPosition() {
     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-// Evento para o botão anterior
+ Slder
 prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
@@ -56,4 +57,4 @@ nextBtn.addEventListener('click', () => {
 
 // Configuração inicial
 updateSliderPosition();
-
+*/

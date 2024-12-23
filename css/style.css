@@ -201,7 +201,6 @@ header{
     justify-content: center;
     flex-direction: column;
     margin: 10px;
-    
     transition: transform 0.5s ease-in-out;
     flex: 0 0 30.333%;
     background: #2d2d2d;
@@ -277,7 +276,7 @@ header{
 .winetext h3 {
     font: 11px;
     font-weight: bolder;
-    font-family: "Playfair Display", serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 5px auto;
     color: #C5A05A;
 }
@@ -343,9 +342,9 @@ header{
 }
 
 .text-promo h3{
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 10px;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Playfair Display", serif;
     color: #C5A05A;
 }
 
