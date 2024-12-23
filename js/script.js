@@ -6,7 +6,7 @@ var buttonFavorito = document.querySelector(".heart-btn")
 window.addEventListener('scroll', function() {
     // Verifica a posição da rolagem
     if (window.scrollY >= 85) {
-        navbar.style.background = "rgba(197, 160, 90, 0.2)"; 
+        navbar.style.background = "rgba(39, 39, 39, 0.59)"; 
         navbar.style.boxShadow = " 0 2px 5px rgba(0, 0, 0, 0.2)"
     } else {
         navbar.style.background = "transparent" 

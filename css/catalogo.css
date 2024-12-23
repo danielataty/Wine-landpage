@@ -450,6 +450,11 @@ footer h4 {
     margin: 0 10px;
 }
 
+.footer-social .social-icons a img:hover {
+    box-shadow: 0 10px 15px rgba(151, 151, 151, 0.2);
+    transform: translateY(-2px); 
+}
+
 .footer-newsletter input {
     padding: 10px;
     margin-right: 10px;
@@ -469,6 +474,7 @@ footer h4 {
 
 .footer-newsletter button:hover {
     background-color: #4B0F24;
+    transform: translateY(-3px);
 }
 
 
